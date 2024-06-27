@@ -4,7 +4,7 @@ library(dplyr)
 library(tidyr)
 
 #1. load excel or csv file containing n-NRF magnitudes "both_sites_magnitudes.xlxs"
-both_sites_magnitudes <- read_excel("both_sites_magnitudes.xlsx")
+both_sites_magnitudes <- read.csv("both_sites_magnitudes.csv")
 
 #2. create dataframes for UCL and Exeter magnitudes separately
 UCL_magnitudes <- both_sites_magnitudes[both_sites_magnitudes$Site == "UCL", ]
