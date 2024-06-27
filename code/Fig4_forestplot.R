@@ -19,7 +19,7 @@ meta_analysis <- metamean(n=n_hyp2,
                                 title = "Pooled means across sites")
 summary(meta_analysis)
 
-forest.meta(meta_analysis, 
+forest(meta_analysis, 
             layout = "meta",
             xlab = "Mean EEG response",
             comb.fixed = TRUE,
