@@ -2,7 +2,7 @@
 
 clear;
 
-T = readtable("both_sites_magnitudes");
+T = readtable("both_sites_magnitudes.csv");
 
 rows_to_exclude = find(T.hypothesis3_include == 0);
 
