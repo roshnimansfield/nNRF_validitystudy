@@ -1,5 +1,5 @@
 % load n-NRF magnitude data for both sites
-both_sites_magnitudes = readtable('both_sites_magnitudes.xlsx');
+both_sites_magnitudes = readtable('both_sites_magnitudes.csv');
 both_sites_magnitudes_hyp1 = both_sites_magnitudes(both_sites_magnitudes.hypothesis1_include == 1, :);
 
 %% UCL
