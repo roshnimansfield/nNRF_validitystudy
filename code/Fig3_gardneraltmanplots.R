@@ -48,7 +48,6 @@ my.data_exeter <-
   tidyr::gather(key = Group, value = Measurement, magnitude_CL_exeter, magnitude_HL_exeter, difference)
 
 #7. bind all 
-my.data_UCL$studyID <- as.character(my.data_UCL$studyID)
 my.data_all <- bind_rows(my.data_UCL, my.data_exeter)
 
 #8. utilise dabestr function to create Gardner Altman plot
