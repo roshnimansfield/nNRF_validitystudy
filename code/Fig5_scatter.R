@@ -2,7 +2,7 @@ library(readxl)
 library(ggplot2)
 
 #1. load excel or csv file containing n-NRF magnitudes "both_sites_magnitudes.xlxs"
-both_sites_magnitudes <- read_excel("both_sites_magnitudes.xlsx")
+both_sites_magnitudes <- read.csv("both_sites_magnitudes.csv")
 
 #2. create df with only hypothesis 3 data for both sites selected
 both_sites_magnitudes_hyp3 <- both_sites_magnitudes[both_sites_magnitudes$hypothesis3_include == 1, ]
