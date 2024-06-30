@@ -2,7 +2,7 @@ library(readxl)
 library(meta)
 
 #1. load excel or csv file containing mean and SD of n-NRF magnitudes at each site
-metamean_bysite <- read_excel("metamean_bysite.xlsx")
+metamean_bysite <- read.csv("metamean_bysite.csv")
 
 #   Oxford, UCL, Exeter. "metamean_bysite.xlxs"
 
@@ -19,7 +19,7 @@ meta_analysis <- metamean(n=n_hyp2,
                                 title = "Pooled means across sites")
 summary(meta_analysis)
 
-forest.meta(meta_analysis, 
+forest(meta_analysis, 
             layout = "meta",
             xlab = "Mean EEG response",
             comb.fixed = TRUE,

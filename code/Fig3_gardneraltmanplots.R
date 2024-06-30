@@ -4,7 +4,7 @@ library(dplyr)
 library(tidyr)
 
 #1. load excel or csv file containing n-NRF magnitudes "both_sites_magnitudes.xlxs"
-both_sites_magnitudes <- read_excel("both_sites_magnitudes.xlsx")
+both_sites_magnitudes <- read.csv("both_sites_magnitudes.csv")
 
 #2. create dataframes for UCL and Exeter magnitudes separately
 UCL_magnitudes <- both_sites_magnitudes[both_sites_magnitudes$Site == "UCL", ]
@@ -48,7 +48,6 @@ my.data_exeter <-
   tidyr::gather(key = Group, value = Measurement, magnitude_CL_exeter, magnitude_HL_exeter, difference)
 
 #7. bind all 
-my.data_UCL$studyID <- as.character(my.data_UCL$studyID)
 my.data_all <- bind_rows(my.data_UCL, my.data_exeter)
 
 #8. utilise dabestr function to create Gardner Altman plot
